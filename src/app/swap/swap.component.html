@@ -1,0 +1,107 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">VIP</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            
+                <ul class="navbar-nav mt-2 mt-lg-0 w-100 justify-content-end">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-user-circle" ></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="section-body">
+    <div class="container">
+        <div class="row">
+            <div class="wrapper w-100 p-5">
+                <div class="inner-wrapper d-flex" [ngSwitch]="state">
+                    <div class="left-block w-50 p-5" *ngSwitchCase="'register'">
+                        <form>
+                            <h5 class="center">Sign up</h5>
+                            <div class="form-group">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword4">Password</label>
+                                <input type="password" class="form-control" id="inputPassword4">
+                            </div>
+                            <div class="form-group">
+                              <label for="inputAddress">Address</label>
+                              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            </div>
+                            <div class="form-group">
+                              <label for="inputAddress2">Address 2</label>
+                              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            </div>
+                            <div class="form-group">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                  Check me out
+                                </label>
+                              </div>
+                            </div>
+                            <button type="submit" (click)="goTo('login')" class="btn btn-primary">Sign Up</button>
+                        </form>
+                    </div>
+                    <div class="right-block w-50 p-5" *ngSwitchCase="'login'">
+                        <form>
+                            <h5 class="center">Sign in</h5>
+                            <div class="form-group">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword4">Password</label>
+                                <input type="password" class="form-control" id="inputPassword4">
+                            </div>
+                            <div class="form-group">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                  Check me in
+                                </label>
+                              </div>
+                            </div>
+                            <button type="submit" (click)="goTo('register')" class="btn btn-info">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <ng-container [ngSwitch]="state">
+    <section *ngSwitchCase="'login'">
+     <h1>Login</h1>
+     <button (click)="goTo('register')">Register</button>
+    </section>
+  
+    <section *ngSwitchCase="'register'">
+     <h1>Register</h1>
+     <button (click)="goTo('login')">Login</button>
+    </section>
+  </ng-container> -->

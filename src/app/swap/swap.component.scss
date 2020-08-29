@@ -1,0 +1,29 @@
+.section-body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 42%, rgba(0,212,255,1) 100%);
+    .wrapper{
+        .inner-wrapper{
+            .left-block{               
+                background: rgb(63, 81, 181, 0.8);
+            }
+            .right-block{
+                background: rgb(104, 70, 245, 0.8);
+            }
+        }
+    }
+}
+label{
+    color: #fff;
+}
+h5{
+    color: #fff;
+}
+
+
+
+@media all and (min-width: 992px){
+    .navbar .nav-item.dropdown-menu{ display:none; }
+    .navbar .nav-item:hover .nav-link{ color: #dedede; }
+    .navbar .nav-item:hover .dropdown-menu { display:block; }
+    .navbar .nav-item:hover .dropdown-menu { margin-top:0 ; }
+}
